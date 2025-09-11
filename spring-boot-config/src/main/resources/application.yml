@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+team:
+    name: "Web2班"
+    leader: "sfsaf"
+    age: 6
+    phone: "15895904812"
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+

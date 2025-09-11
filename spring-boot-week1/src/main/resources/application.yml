@@ -1,2 +1,23 @@
 server:
   port: 8081
+#自定义配置:心情语录
+my:
+  mood:
+      today: 星期五
+      content: 累了铁子
+      author: "人"
+
+#功能开关
+  feature:
+   helloSwitch: false
+   closeMsg: "功能正在维护，稍后再试"
+
+ccc:
+     sms:
+       ccp:
+         serverIp: app.cloopen.com
+         port: 8883
+         accountSId: 2c94811c9860a9c4019917bb345e1dd3
+         accountToken: cb9d65a186724cc1b7f97fc544cf12f4
+         appId: 2c94811c9860a9c4019917bb35c91dda
+         templateId: 1

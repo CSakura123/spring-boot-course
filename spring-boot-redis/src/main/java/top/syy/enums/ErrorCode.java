@@ -1,0 +1,24 @@
+package top.syy.enums;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+/**
+ * @author 小c
+ */
+
+@AllArgsConstructor
+@Getter
+public enum ErrorCode {
+    PHONE_ERROR(400, "验证码输入错误"),
+    UNAUTHORIZED(401, "登录失效，请重新登录"),
+    NOT_FOUND(404, "手机号输入错误"),
+    NOT_PERMISSION(403, "权限不足"),
+    METHOD_ERROR(405, "方法不允许"),
+    SERVER_ERROR(500, "服务器异常，请稍后再试");
+
+    private int code;
+    private String message;
+
+
+}

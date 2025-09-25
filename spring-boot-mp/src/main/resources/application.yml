@@ -1,18 +1,33 @@
-server:
-  port: 8081
+# 生效的 Spring 环境
 spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mp_demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+  profiles:
+    active: dev
 
+# MyBatis-Plus 配置
 mybatis-plus:
+  # Mapper XML 扫描路径
+  mapper-locations: classpath*:mapper/*.xml
+  # 实体类别名包
+  type-aliases-package: top.syy.boot.mp.entity
   configuration:
+    # 开启驼峰命名自动转换
     map-underscore-to-camel-case: true
+    # SQL 控制台日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:
     db-config:
+      # 主键策略：自增
+      id-type: auto
+      # 逻辑删除字段
       logic-delete-field: deleted
-      logic-delete-value: 1
-      logic-not-delete-value: 0
+      logic-delete-value: 1        # 已删除
+      logic-not-delete-value: 0    # 未删除
+      # 字段填充策略
+      insert-strategy: not_null
+      update-strategy: not_null
+
+# 日志级别
+logging:
+  level:
+    top.syy.boot.mp: debug
+    com.baomidou.mybatisplus: debug

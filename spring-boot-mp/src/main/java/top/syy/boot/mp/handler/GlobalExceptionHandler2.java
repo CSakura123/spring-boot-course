@@ -13,9 +13,9 @@ import top.syy.boot.mp.exception.BookNotFoundException;
 import top.syy.boot.mp.exception.InvalidParamException;
 import top.syy.boot.mp.exception.BusinessException;
 @RestControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalExceptionHandler2 {
 
-    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler2.class);
 
     private static final int BAD_REQUEST_CODE = 400;
     private static final int INTERNAL_ERROR_CODE = 500;

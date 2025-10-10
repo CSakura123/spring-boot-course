@@ -24,9 +24,10 @@
     <modules>
         <module>spring-boot-week1</module>
         <module>spring-boot-config</module>
-        <module>spring-boot-mp</module>
+<!--        <module>spring-boot-mp</module>-->
         <module>spring-boot-exception</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-filter-interceptor</module>
 
     </modules>
     <scm>
@@ -44,6 +45,7 @@
         <datafaker.version>2.2.2</datafaker.version>
         <fastjson2.version>2.0.59</fastjson2.version>
         <java-sms-sdk.version>1.0.4</java-sms-sdk.version>
+        <jjwt.version>0.13.0 </jjwt.version>
     </properties>
     <dependencies>
         <dependency>
@@ -75,6 +77,22 @@
     <!--统一管理版本-->
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.cloopen</groupId>
                 <artifactId>java-sms-sdk</artifactId>
